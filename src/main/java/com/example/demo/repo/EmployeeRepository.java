@@ -10,7 +10,10 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, EmployeeTenantKey> {
 
     @Query("select rootManager from Employee rootManager " +
-            "where rootManager.manager is null")
+            "where not exists (" +
+            "   select employee from Employee employee " +
+            "   where rootManager.manager = employee" +
+            ")")
     List<Employee> findRootManagers();
 
 }
