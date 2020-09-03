@@ -37,24 +37,24 @@ public class Employee {
     private String id;
 
     @Id
-    @Column(name = "tid", nullable = false, updatable = false, columnDefinition = TID_DEF)
+    @Column(name = "tenant_id", nullable = false, updatable = false, columnDefinition = TID_DEF)
     @Setter(AccessLevel.NONE)
-    private String tid;
+    private String tenantId;
 
     private String title;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumnsOrFormulas(value = {
-            @JoinColumnOrFormula(formula = @JoinFormula(value = "tid", referencedColumnName = "tid")),
-            @JoinColumnOrFormula(column = @JoinColumn(name = "managerid", referencedColumnName = "id",
+            @JoinColumnOrFormula(formula = @JoinFormula(value = "tenant_id", referencedColumnName = "tenant_id")),
+            @JoinColumnOrFormula(column = @JoinColumn(name = "manager_id", referencedColumnName = "id",
                     columnDefinition = ID_DEF, foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT)))
     })
     private Employee manager;
 
     @Builder
-    public Employee(String tid, String title) {
+    public Employee(String tenantId, String title) {
         this.id = UUID.randomUUID().toString();
-        this.tid = tid;
+        this.tenantId = tenantId;
         this.title = title;
     }
 

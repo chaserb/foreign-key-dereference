@@ -23,7 +23,7 @@ public class EmployeeTenantKey implements Serializable {
     @Column(name = "id", nullable = false, columnDefinition = ID_DEF)
     private String id;
 
-    @Column(name = "tid", nullable = false, columnDefinition = TID_DEF)
-    private String tid;
+    @Column(name = "tenant_id", nullable = false, columnDefinition = TID_DEF)
+    private String tenantId;
 
 }

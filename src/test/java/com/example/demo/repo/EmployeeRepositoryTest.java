@@ -50,25 +50,25 @@ public class EmployeeRepositoryTest {
     public void setup() {
 
         // Create the employees
-        ceo = employeeRepo.save(Employee.builder().tid("default").title("ceo").build());
-        cpo = employeeRepo.save(Employee.builder().tid("default").title("cpo").build());
-        coo = employeeRepo.save(Employee.builder().tid("default").title("coo").build());
-        execSecr = employeeRepo.save(Employee.builder().tid("default").title("execSecr").build());
-        prodSecr = employeeRepo.save(Employee.builder().tid("default").title("prodSecr").build());
-        operSecr = employeeRepo.save(Employee.builder().tid("default").title("operSecr").build());
-        engrMgr = employeeRepo.save(Employee.builder().tid("default").title("engrMgr").build());
-        quasMgr = employeeRepo.save(Employee.builder().tid("default").title("quasMgr").build());
-        mktgMgr = employeeRepo.save(Employee.builder().tid("default").title("mktgMgr").build());
-        custMgr = employeeRepo.save(Employee.builder().tid("default").title("custMgr").build());
-        engr1 = employeeRepo.save(Employee.builder().tid("default").title("engr1").build());
-        admin = employeeRepo.save(Employee.builder().tid("default").title("admin").build());
-        Employee engr2 = employeeRepo.save(Employee.builder().tid("default").title("engr2").build());
-        Employee quas1 = employeeRepo.save(Employee.builder().tid("default").title("quas1").build());
-        Employee quas2 = employeeRepo.save(Employee.builder().tid("default").title("quas2").build());
-        Employee mktg1 = employeeRepo.save(Employee.builder().tid("default").title("mktg1").build());
-        Employee mktg2 = employeeRepo.save(Employee.builder().tid("default").title("mktg2").build());
-        Employee cust1 = employeeRepo.save(Employee.builder().tid("default").title("cust1").build());
-        Employee cust2 = employeeRepo.save(Employee.builder().tid("default").title("cust2").build());
+        ceo = employeeRepo.save(Employee.builder().tenantId("default").title("ceo").build());
+        cpo = employeeRepo.save(Employee.builder().tenantId("default").title("cpo").build());
+        coo = employeeRepo.save(Employee.builder().tenantId("default").title("coo").build());
+        execSecr = employeeRepo.save(Employee.builder().tenantId("default").title("execSecr").build());
+        prodSecr = employeeRepo.save(Employee.builder().tenantId("default").title("prodSecr").build());
+        operSecr = employeeRepo.save(Employee.builder().tenantId("default").title("operSecr").build());
+        engrMgr = employeeRepo.save(Employee.builder().tenantId("default").title("engrMgr").build());
+        quasMgr = employeeRepo.save(Employee.builder().tenantId("default").title("quasMgr").build());
+        mktgMgr = employeeRepo.save(Employee.builder().tenantId("default").title("mktgMgr").build());
+        custMgr = employeeRepo.save(Employee.builder().tenantId("default").title("custMgr").build());
+        engr1 = employeeRepo.save(Employee.builder().tenantId("default").title("engr1").build());
+        admin = employeeRepo.save(Employee.builder().tenantId("default").title("admin").build());
+        Employee engr2 = employeeRepo.save(Employee.builder().tenantId("default").title("engr2").build());
+        Employee quas1 = employeeRepo.save(Employee.builder().tenantId("default").title("quas1").build());
+        Employee quas2 = employeeRepo.save(Employee.builder().tenantId("default").title("quas2").build());
+        Employee mktg1 = employeeRepo.save(Employee.builder().tenantId("default").title("mktg1").build());
+        Employee mktg2 = employeeRepo.save(Employee.builder().tenantId("default").title("mktg2").build());
+        Employee cust1 = employeeRepo.save(Employee.builder().tenantId("default").title("cust1").build());
+        Employee cust2 = employeeRepo.save(Employee.builder().tenantId("default").title("cust2").build());
 
         // Create the hierarchy
         cpo.setManager(ceo);
